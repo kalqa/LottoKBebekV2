@@ -8,9 +8,8 @@ import java.util.TreeSet;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Do you wany to play a MiniLotek? Choose an option below:");
-        System.out.println("1. Play");
-        System.out.println("2. Exit");
+
+        MessageDisplayer.displayStartMessages();
 
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
