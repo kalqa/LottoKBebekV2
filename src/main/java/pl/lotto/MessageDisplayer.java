@@ -7,4 +7,8 @@ public class MessageDisplayer {
         System.out.println("1. Play");
         System.out.println("2. Exit");
     }
+
+    public static void displayYesNoQuestion() {
+        System.out.println("Do you want play again? Yes/No");
+    }
 }
