@@ -1,7 +1,5 @@
 package pl.lotto;
 
-import java.util.Scanner;
-
 public class UiOpstionChooser {
 
     public static void chooseAnOption() {
@@ -11,8 +9,7 @@ public class UiOpstionChooser {
         while (wantToPlay) {
             switch (numericResponse) {
                 case 1 -> {
-                    GameStarter.playMiniLotto();
-                    MessageDisplayer.displayYesNoQuestion();
+                    MiniLottoStarter.playTheGame();
                     UserAsker.askUser().nextLine();
                     if (UserAsker.askUser().nextLine().equalsIgnoreCase("No")) {
                         wantToPlay = false;
