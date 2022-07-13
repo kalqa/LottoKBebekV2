@@ -13,10 +13,11 @@ public class UiOpstionChooser {
                     UserAsker.askUser().nextLine();
                     if (UserAsker.askUser().nextLine().equalsIgnoreCase("No")) {
                         wantToPlay = false;
+                    } else {
+                        UserGameNumberPicker.getUserNumbers().clear();
                     }
                 }
                 case 2 -> wantToPlay = false;
-
             }
         }
 
