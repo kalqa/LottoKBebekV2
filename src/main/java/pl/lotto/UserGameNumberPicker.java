@@ -14,10 +14,12 @@ public class UserGameNumberPicker {
         while (userNumbers.size() < 6) {
             int numberAnswer = UserAsker.askUser().nextInt();
             if (!RangeChecker.isInRange(numberAnswer)) {
-                System.out.println("Your number must be between 1-99 inclusive");
+                System.out.println("Your number must be between 1-99 inclusive. Please change this number");
+                numberAnswer = UserAsker.askUser().nextInt();
             }
             if (userNumbers.contains(numberAnswer)) {
-                System.out.println("You already wrote the number.");
+                System.out.println("You already wrote the number. Please change this number");
+                numberAnswer = UserAsker.askUser().nextInt();
             }
             userNumbers.add(numberAnswer);
             Collections.sort(userNumbers);
