@@ -4,7 +4,7 @@ import java.util.List;
 
 public class AwardsDisplayer {
 
-        public static void printYourAward(List<Integer> userNumbers) {
+        public static void printUserAward(List<Integer> userNumbers) {
         if (CollectionsChecker.checkAndCompareCollections(userNumbers) == 0) {
             System.out.println("Unfortunately, your award is equal zero");
         }
