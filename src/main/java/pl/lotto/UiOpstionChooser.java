@@ -5,17 +5,16 @@ import java.util.Scanner;
 public class UiOpstionChooser {
 
     public static void chooseAnOption() {
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
         boolean wantToPlay = true;
+        int numericResponse = UserAsker.askUser().nextInt();
 
         while (wantToPlay) {
-            switch (option) {
+            switch (numericResponse) {
                 case 1 -> {
-                    GameStarter.play(scanner);
+                    GameStarter.playMiniLotto();
                     MessageDisplayer.displayYesNoQuestion();
-                    scanner.nextLine();
-                    if (scanner.nextLine().equalsIgnoreCase("No")) {
+                    UserAsker.askUser().nextLine();
+                    if (UserAsker.askUser().nextLine().equalsIgnoreCase("No")) {
                         wantToPlay = false;
                     }
                 }
