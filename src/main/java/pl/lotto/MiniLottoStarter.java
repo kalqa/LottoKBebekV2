@@ -4,18 +4,18 @@ import java.util.*;
 
 public class MiniLottoStarter {
 
-    public static void playTheGame() {
-        UserGameNumberPicker.pickNumbers();
-        MessageDisplayer.displayNumbers("Here are your numbers: " + UserGameNumberPicker.getUserNumbers());
+    public static void runTheGame() {
+        UserNumberPicker.pickNumbers();
+        MessageDisplayer.displayMessage("Here are your numbers: " + UserNumberPicker.getUserNumbers());
 
         LottoNumberGenerator.draw(new Random());
-        MessageDisplayer.displayNumbers("Here are machine numbers: " + LottoNumberGenerator.getRandomNumbers());
+        MessageDisplayer.displayMessage("Here are machine numbers: " + LottoNumberGenerator.getRandomNumbers());
 
-        MessageDisplayer.displayUserScore("You hit accurate: " + CollectionsChecker.checkAndCompareCollections(UserGameNumberPicker.getUserNumbers()) + " numbers");
+        MessageDisplayer.displayMessage("You hit accurate: " + CollectionsChecker.checkAndCompareCollections(UserNumberPicker.getUserNumbers()) + " numbers");
 
-        AwardsDisplayer.printUserAward(UserGameNumberPicker.getUserNumbers());
+        AwardsDisplayer.printUserAward(UserNumberPicker.getUserNumbers());
 
-        MessageDisplayer.displayYesNoQuestion();
+        MessageDisplayer.displayMessage("Do you want play again? Yes/No");
     }
 }
 
