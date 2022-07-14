@@ -21,7 +21,7 @@ public class UiOpstionChooser {
                         UserNumberPicker.getUserNumbers().clear();
                     }
                 }
-                case 2 -> System.exit(0);
+                case 2 -> GameStarter.chooseGame();
             }
         }
     }
