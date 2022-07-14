@@ -1,6 +1,6 @@
 package pl.lotto;
 
-public class UiOpstionChooser {
+public class UiOptionPicker {
 
     public static void chooseAnOption() {
         MessageDisplayer.displayMessage("""
