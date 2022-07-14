@@ -5,7 +5,7 @@ public class MiniLotek {
     public MiniLotek() {
     }
 
-    public static void play() {
+    public static void startGame() {
         UiOpstionChooser.chooseAnOption();
     }
 }
