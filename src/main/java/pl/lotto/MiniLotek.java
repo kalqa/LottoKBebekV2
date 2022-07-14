@@ -6,6 +6,6 @@ public class MiniLotek {
     }
 
     public static void startGame() {
-        UiOpstionChooser.chooseAnOption();
+        UiOptionPicker.chooseAnOption();
     }
 }
