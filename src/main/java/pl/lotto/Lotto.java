@@ -1,8 +1,8 @@
 package pl.lotto;
 
-public class Lotek {
+public class Lotto {
 
-    public Lotek() {
+    public Lotto() {
     }
 
     public static void startGame() {
