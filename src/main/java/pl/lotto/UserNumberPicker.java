@@ -12,10 +12,10 @@ public class UserNumberPicker {
         MessageDisplayer.displayMessage("Please write six numbers:");
 
         while (userNumbers.size() < 6) {
-            int numberAnswer = UserAsker.askUser().nextInt();
-            numberAnswer = NumberRangeVerificator.verifyNumberRange(numberAnswer);
-            numberAnswer = ContentVerificator.verifyContent(numberAnswer);
-            userNumbers.add(numberAnswer);
+            int userNumber = UserAsker.askUser().nextInt();
+            userNumber = NumberRangeVerificator.verifyNumberRange(userNumber);
+            userNumber = ContentVerificator.verifyContent(userNumber);
+            userNumbers.add(userNumber);
             Collections.sort(userNumbers);
         }
     }
