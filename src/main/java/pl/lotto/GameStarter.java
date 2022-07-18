@@ -9,7 +9,7 @@ public class GameStarter {
                 2. Exit""");
 
         switch (UserAsker.askUser().nextInt()) {
-            case 1 -> MiniLotek.startGame();
+            case 1 -> Lotek.startGame();
             case 2 -> System.exit(0);
         }
     }
