@@ -5,7 +5,7 @@ public class WantToPlayChecker {
     public static boolean isWantToPlay(boolean wantToPlay, int numericResponse) {
         switch (numericResponse) {
             case 1 -> {
-                MiniLottoStarter.runTheGame();
+                LottoStarter.runTheGame();
                 UserAsker.askUser().nextLine();
                 if (UserAsker.askUser().nextLine().equalsIgnoreCase("No")) {
                     wantToPlay = false;
