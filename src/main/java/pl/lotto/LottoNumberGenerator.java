@@ -5,13 +5,13 @@ import java.util.TreeSet;
 
 public class LottoNumberGenerator {
 
-    private static final TreeSet<Integer> randomNumbers = new TreeSet<>();
+    private static final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
     public static void draw(Random random) {
-        while (randomNumbers.size() < 6) {
-            randomNumbers.add(random.nextInt(100));
+        while (lottoRandomNumbersSet.size() < 6) {
+            lottoRandomNumbersSet.add(random.nextInt(100));
         }
     }
-    public static TreeSet<Integer> getRandomNumbers() {
-        return randomNumbers;
+    public static TreeSet<Integer> getLottoRandomNumbersSet() {
+        return lottoRandomNumbersSet;
     }
 }
