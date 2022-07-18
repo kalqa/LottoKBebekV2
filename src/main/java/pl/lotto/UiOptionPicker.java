@@ -10,7 +10,7 @@ public class UiOptionPicker {
         boolean wantToPlay = true;
         int numericResponse = UserAsker.askUser().nextInt();
         while (wantToPlay) {
-            wantToPlay = WantToPlayChecker.isWantToPlay(wantToPlay, numericResponse);
+            wantToPlay = WantToPlayChecker.isWantToPlay(true, numericResponse);
         }
     }
 }
