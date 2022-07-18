@@ -1,4 +1,4 @@
-package pl.lotto;
+package pl.lotto.LottoLogic;
 
 import java.util.Random;
 import java.util.TreeSet;
@@ -6,11 +6,13 @@ import java.util.TreeSet;
 public class LottoNumberGenerator {
 
     private static final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
+
     public static void draw(Random random) {
         while (lottoRandomNumbersSet.size() < 6) {
             lottoRandomNumbersSet.add(random.nextInt(100));
         }
     }
+
     public static TreeSet<Integer> getLottoRandomNumbersSet() {
         return lottoRandomNumbersSet;
     }

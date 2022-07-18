@@ -1,4 +1,8 @@
-package pl.lotto;
+package pl.lotto.LottoLogic;
+
+import pl.lotto.AwardsDisplayer;
+
+import pl.lotto.MessageDisplayer;
 
 import java.util.*;
 

@@ -1,4 +1,7 @@
-package pl.lotto;
+package pl.lotto.LottoLogic;
+
+import pl.lotto.MessageDisplayer;
+import pl.lotto.UserAsker;
 
 import java.util.ArrayList;
 import java.util.Collections;

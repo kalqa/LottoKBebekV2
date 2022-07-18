@@ -1,4 +1,4 @@
-package pl.lotto;
+package pl.lotto.LottoLogic;
 
 import java.util.List;
 
