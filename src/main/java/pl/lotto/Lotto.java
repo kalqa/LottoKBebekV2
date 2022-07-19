@@ -2,10 +2,12 @@ package pl.lotto;
 
 public class Lotto {
 
+    private final UiOptionPicker uiOptionPicker = new UiOptionPicker();
+
     public Lotto() {
     }
 
-    public static void startGame() {
-        UiOptionPicker.chooseAnOption();
+    public void startGame() {
+        uiOptionPicker.chooseAnOption();
     }
 }

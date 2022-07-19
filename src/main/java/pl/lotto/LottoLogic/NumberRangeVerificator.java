@@ -5,15 +5,15 @@ import pl.lotto.UserAsker;
 
 public class NumberRangeVerificator {
 
-    public static int verifyNumberRange(int numberAnswer) {
+    public int verifyNumberRange(int numberAnswer) {
         while (!isInRange(numberAnswer)) {
             MessageDisplayer.displayMessage("Your number must be between 1-99 inclusive. Please change this number");
-            numberAnswer = UserAsker.askUser().nextInt();
+            numberAnswer = new UserAsker().askUserForNumber();
         }
         return numberAnswer;
     }
 
-    private static boolean isInRange(int numberFromUser) {
+    private boolean isInRange(int numberFromUser) {
         return numberFromUser >= 1 && numberFromUser <= 99;
     }
 }

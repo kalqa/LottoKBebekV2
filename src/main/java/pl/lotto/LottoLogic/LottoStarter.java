@@ -8,16 +8,21 @@ import java.util.*;
 
 public class LottoStarter {
 
-    public static void runTheGame() {
-        UserNumberPicker.pickNumbers();
+    private final UserNumberPicker userNumberPicker = new UserNumberPicker();
+    private final LottoNumberGenerator lottoNumberGenerator = new LottoNumberGenerator();
+    private final CollectionsChecker collectionsChecker = new CollectionsChecker();
+    private final AwardsDisplayer awardsDisplayer = new AwardsDisplayer();
+
+    public void runTheGame() {
+        userNumberPicker.pickNumbers();
         MessageDisplayer.displayMessage("Here are your numbers: " + UserNumberPicker.getUserNumbers());
 
-        LottoNumberGenerator.draw(new Random());
-        MessageDisplayer.displayMessage("Here are machine numbers: " + LottoNumberGenerator.getLottoRandomNumbersSet());
+        lottoNumberGenerator.draw(new Random());
+        MessageDisplayer.displayMessage("Here are machine numbers: " + lottoNumberGenerator.getLottoRandomNumbersSet());
 
-        MessageDisplayer.displayMessage("You hit accurate: " + CollectionsChecker.checkAndCompareCollections(UserNumberPicker.getUserNumbers()) + " numbers");
+        MessageDisplayer.displayMessage("You hit accurate: " + collectionsChecker.compareUserAndMachineNumbers(UserNumberPicker.getUserNumbers()) + " numbers");
 
-        AwardsDisplayer.printUserAward(UserNumberPicker.getUserNumbers());
+        awardsDisplayer.printUserAward(UserNumberPicker.getUserNumbers());
 
         MessageDisplayer.displayMessage("Do you want play again? Yes/No");
     }

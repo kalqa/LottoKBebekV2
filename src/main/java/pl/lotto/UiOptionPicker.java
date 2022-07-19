@@ -5,32 +5,32 @@ import pl.lotto.LottoLogic.UserNumberPicker;
 
 public class UiOptionPicker {
 
-    public static void chooseAnOption() {
+    public void chooseAnOption() {
         MessageDisplayer.displayMessage("""
                 Choose an option below:
                 1. Play
                 2. Exit""");
         boolean wantToPlay = true;
-        int numericResponse = UserAsker.askUser().nextInt();
+        int numericResponse = new UserAsker().askUserForNumber();
         while (wantToPlay) {
             wantToPlay = isWantToPlay(numericResponse);
         }
     }
 
-    private static boolean isWantToPlay(int numericResponse) {
+    private boolean isWantToPlay(int numericResponse) {
         boolean doesWantToPlay = true;
         switch (numericResponse) {
             case 1 -> {
-                LottoStarter.runTheGame();
-                UserAsker.askUser().nextLine();
-                if (UserAsker.askUser().nextLine().equalsIgnoreCase("No")) {
+                new LottoStarter().runTheGame();
+                String answer = new UserAsker().askUserForSign();
+                if (answer.equalsIgnoreCase("No")) {
                     doesWantToPlay = false;
-                    GameStarter.chooseGame();
+                    new GameStarter().chooseGame(new UserAsker());
                 } else {
                     UserNumberPicker.getUserNumbers().clear();
                 }
             }
-            case 2 -> GameStarter.chooseGame();
+            case 2 -> new GameStarter().chooseGame(new UserAsker());
         }
         return doesWantToPlay;
     }

@@ -4,7 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GameStarter.chooseGame();
+        UserAsker userAsker = new UserAsker();
+        new GameStarter().chooseGame(userAsker);
 
     }
 }

@@ -5,15 +5,15 @@ import java.util.TreeSet;
 
 public class LottoNumberGenerator {
 
-    private static final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
+    private final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
 
-    public static void draw(Random random) {
+    public void draw(Random random) {
         while (lottoRandomNumbersSet.size() < 6) {
             lottoRandomNumbersSet.add(random.nextInt(100));
         }
     }
 
-    public static TreeSet<Integer> getLottoRandomNumbersSet() {
+    public TreeSet<Integer> getLottoRandomNumbersSet() {
         return lottoRandomNumbersSet;
     }
 }
