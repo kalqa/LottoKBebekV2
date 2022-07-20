@@ -1,7 +1,10 @@
 package pl.lotto;
+
+import java.util.List;
+
 public class GameStarter {
 
-    private final Lotto lotto = new Lotto();
+    private final List<Playable> games = List.of(new Lotto());
 
     public void chooseGame(UserAsker userAsker) {
         MessageDisplayer.displayMessage("""
@@ -10,7 +13,7 @@ public class GameStarter {
                 2. Exit""");
 
         switch (userAsker.askUserForNumber()) {
-            case 1 -> lotto.startGame();
+            case 1 -> games.get(0).startGame();
             case 2 -> System.exit(0);
         }
     }

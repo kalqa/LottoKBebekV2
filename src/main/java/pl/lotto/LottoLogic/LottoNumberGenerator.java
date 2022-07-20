@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 public class LottoNumberGenerator {
 
-    private final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
+    private static final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
 
     public void draw(Random random) {
         while (lottoRandomNumbersSet.size() < 6) {
@@ -13,7 +13,7 @@ public class LottoNumberGenerator {
         }
     }
 
-    public TreeSet<Integer> getLottoRandomNumbersSet() {
+    public static TreeSet<Integer> getLottoRandomNumbersSet() {
         return lottoRandomNumbersSet;
     }
 }

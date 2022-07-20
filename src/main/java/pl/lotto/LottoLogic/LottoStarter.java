@@ -8,19 +8,26 @@ import java.util.*;
 
 public class LottoStarter {
 
-    private final UserNumberPicker userNumberPicker = new UserNumberPicker();
-    private final LottoNumberGenerator lottoNumberGenerator = new LottoNumberGenerator();
-    private final CollectionsChecker collectionsChecker = new CollectionsChecker();
-    private final AwardsDisplayer awardsDisplayer = new AwardsDisplayer();
+    private final UserNumberPicker userNumberPicker;
+    private final LottoNumberGenerator lottoNumberGenerator;
+    private final CollectionsChecker collectionChecker;
+    private final AwardsDisplayer awardsDisplayer;
+
+    public LottoStarter(UserNumberPicker userNumberPicker, LottoNumberGenerator lottoNumberGenerator, CollectionsChecker collectionChecker, AwardsDisplayer awardsDisplayer) {
+        this.userNumberPicker = userNumberPicker;
+        this.lottoNumberGenerator = lottoNumberGenerator;
+        this.collectionChecker = collectionChecker;
+        this.awardsDisplayer = awardsDisplayer;
+    }
 
     public void runTheGame() {
         userNumberPicker.pickNumbers();
         MessageDisplayer.displayMessage("Here are your numbers: " + UserNumberPicker.getUserNumbers());
 
         lottoNumberGenerator.draw(new Random());
-        MessageDisplayer.displayMessage("Here are machine numbers: " + lottoNumberGenerator.getLottoRandomNumbersSet());
+        MessageDisplayer.displayMessage("Here are machine numbers: " + LottoNumberGenerator.getLottoRandomNumbersSet());
 
-        MessageDisplayer.displayMessage("You hit accurate: " + collectionsChecker.compareUserAndMachineNumbers(UserNumberPicker.getUserNumbers()) + " numbers");
+        MessageDisplayer.displayMessage("You hit accurate: " + collectionChecker.compareUserAndMachineNumbers(UserNumberPicker.getUserNumbers()) + " numbers");
 
         awardsDisplayer.printUserAward(UserNumberPicker.getUserNumbers());
 
