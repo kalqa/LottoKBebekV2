@@ -1,13 +1,11 @@
-package pl.lotto;
-
-import pl.lotto.LottoLogic.CollectionsChecker;
+package pl.lotto.LottoLogic;
 
 import java.util.List;
 
-public class AwardsDisplayer {
+class AwardsDisplayer {
 
     private final CollectionsChecker collectionsChecker = new CollectionsChecker();
-    public void printUserAward(List<Integer> userNumbers) {
+    void printUserAward(List<Integer> userNumbers) {
         if (collectionsChecker.compareUserAndMachineNumbers(userNumbers) == 0) {
             System.out.println("Unfortunately, your award is equal zero");
         }

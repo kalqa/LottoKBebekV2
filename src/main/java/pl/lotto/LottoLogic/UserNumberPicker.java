@@ -1,18 +1,17 @@
 package pl.lotto.LottoLogic;
 
-import pl.lotto.MessageDisplayer;
 import pl.lotto.UserAsker;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class UserNumberPicker {
+class UserNumberPicker {
     private final NumberRangeVerificator numberRangeVerificator = new NumberRangeVerificator();
     private final ContentVerificator contentVerificator = new ContentVerificator();
     private static final List<Integer> userNumbers = new ArrayList<>();
 
-    public void pickNumbers() {
+    void pickNumbers() {
         MessageDisplayer.displayMessage("Please write six numbers:");
 
         while (userNumbers.size() < 6) {
@@ -24,7 +23,7 @@ public class UserNumberPicker {
         }
     }
 
-    public static List<Integer> getUserNumbers() {
+    static List<Integer> getUserNumbers() {
         return userNumbers;
     }
 }

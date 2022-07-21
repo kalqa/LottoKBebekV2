@@ -1,5 +1,7 @@
 package pl.lotto;
 
+import pl.lotto.LottoLogic.MessageDisplayer;
+
 import java.util.List;
 
 public class GameStarter {

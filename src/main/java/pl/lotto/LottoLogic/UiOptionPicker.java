@@ -1,9 +1,7 @@
-package pl.lotto;
+package pl.lotto.LottoLogic;
 
-import pl.lotto.LottoLogic.CollectionsChecker;
-import pl.lotto.LottoLogic.LottoNumberGenerator;
-import pl.lotto.LottoLogic.LottoStarter;
-import pl.lotto.LottoLogic.UserNumberPicker;
+import pl.lotto.GameStarter;
+import pl.lotto.UserAsker;
 
 public class UiOptionPicker {
 
@@ -23,7 +21,7 @@ public class UiOptionPicker {
         boolean doesWantToPlay = true;
         switch (numericResponse) {
             case 1 -> {
-                new LottoStarter(new UserNumberPicker(), new LottoNumberGenerator(), new CollectionsChecker(), new AwardsDisplayer()).runTheGame();
+                new LottoStarter().runTheGame();
                 String answer = new UserAsker().askUserForSign();
                 if (answer.equalsIgnoreCase("No")) {
                     doesWantToPlay = false;

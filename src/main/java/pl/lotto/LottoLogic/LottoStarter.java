@@ -1,23 +1,20 @@
 package pl.lotto.LottoLogic;
 
-import pl.lotto.AwardsDisplayer;
-
-import pl.lotto.MessageDisplayer;
-
 import java.util.*;
 
-public class LottoStarter {
+class LottoStarter {
 
     private final UserNumberPicker userNumberPicker;
     private final LottoNumberGenerator lottoNumberGenerator;
     private final CollectionsChecker collectionChecker;
     private final AwardsDisplayer awardsDisplayer;
 
-    public LottoStarter(UserNumberPicker userNumberPicker, LottoNumberGenerator lottoNumberGenerator, CollectionsChecker collectionChecker, AwardsDisplayer awardsDisplayer) {
-        this.userNumberPicker = userNumberPicker;
-        this.lottoNumberGenerator = lottoNumberGenerator;
-        this.collectionChecker = collectionChecker;
-        this.awardsDisplayer = awardsDisplayer;
+    public LottoStarter() {
+        userNumberPicker = new UserNumberPicker();
+        lottoNumberGenerator = new LottoNumberGenerator();
+        collectionChecker = new CollectionsChecker();
+        awardsDisplayer = new AwardsDisplayer();
+
     }
 
     public void runTheGame() {
