@@ -2,7 +2,7 @@ package pl.lotto.LottoLogic;
 
 import pl.lotto.UserAsker;
 
-class NumberRangeVerificator {
+public class NumberRangeVerificator {
 
     int verifyNumberRange(int numberAnswer) {
         while (!isInRange(numberAnswer)) {

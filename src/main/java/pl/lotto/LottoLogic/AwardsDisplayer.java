@@ -2,7 +2,7 @@ package pl.lotto.LottoLogic;
 
 import java.util.List;
 
-class AwardsDisplayer {
+public class AwardsDisplayer {
 
     private final CollectionsChecker collectionsChecker = new CollectionsChecker();
     void printUserAward(List<Integer> userNumbers) {

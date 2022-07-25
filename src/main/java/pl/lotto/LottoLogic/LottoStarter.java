@@ -2,7 +2,7 @@ package pl.lotto.LottoLogic;
 
 import java.util.*;
 
-class LottoStarter {
+public class LottoStarter {
 
     private final UserNumberPicker userNumberPicker;
     private final LottoNumberGenerator lottoNumberGenerator;

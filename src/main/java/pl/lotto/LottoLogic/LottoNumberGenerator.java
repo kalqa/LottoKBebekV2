@@ -3,7 +3,7 @@ package pl.lotto.LottoLogic;
 import java.util.Random;
 import java.util.TreeSet;
 
-class LottoNumberGenerator {
+public class LottoNumberGenerator {
 
     private static final TreeSet<Integer> lottoRandomNumbersSet = new TreeSet<>();
 

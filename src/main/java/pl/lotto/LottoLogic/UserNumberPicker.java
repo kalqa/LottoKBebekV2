@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class UserNumberPicker {
+public class UserNumberPicker {
     private final NumberRangeVerificator numberRangeVerificator = new NumberRangeVerificator();
     private final ContentVerificator contentVerificator = new ContentVerificator();
     private static final List<Integer> userNumbers = new ArrayList<>();

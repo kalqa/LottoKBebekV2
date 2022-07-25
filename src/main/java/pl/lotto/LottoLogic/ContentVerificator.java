@@ -2,7 +2,7 @@ package pl.lotto.LottoLogic;
 
 import pl.lotto.UserAsker;
 
-class ContentVerificator {
+public class ContentVerificator {
     private final NumberRangeVerificator numberRangeVerificator = new NumberRangeVerificator();
     int verifyContent(int numberAnswer) {
         while (UserNumberPicker.getUserNumbers().contains(numberAnswer)) {
