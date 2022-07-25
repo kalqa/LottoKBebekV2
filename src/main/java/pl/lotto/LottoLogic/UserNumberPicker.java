@@ -15,7 +15,7 @@ public class UserNumberPicker {
         MessageDisplayer.displayMessage("Please write six numbers:");
 
         while (userNumbers.size() < 6) {
-            int userNumber = UserAsker.askUser().nextInt();
+            int userNumber = UserAsker.askUserForNumber();
             userNumber = NumberRangeVerificator.verifyNumberRange(userNumber);
             userNumber = ContentVerificator.verifyContent(userNumber);
             userNumbers.add(userNumber);

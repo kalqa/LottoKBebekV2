@@ -8,7 +8,7 @@ public class NumberRangeVerificator {
     public static int verifyNumberRange(int numberAnswer) {
         while (!isInRange(numberAnswer)) {
             MessageDisplayer.displayMessage("Your number must be between 1-99 inclusive. Please change this number");
-            numberAnswer = UserAsker.askUser().nextInt();
+            numberAnswer = UserAsker.askUserForNumber();
         }
         return numberAnswer;
     }

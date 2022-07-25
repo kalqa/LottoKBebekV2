@@ -4,9 +4,15 @@ import java.util.Scanner;
 
 public class UserAsker {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
-    public static Scanner askUser() {
-        return scanner;
+    public int askUserForNumber() {
+        int numberFromUser = scanner.nextInt();
+        scanner.nextLine();
+        return numberFromUser;
+    }
+
+    public String askUserForSign() {
+        return scanner.nextLine();
     }
 }
