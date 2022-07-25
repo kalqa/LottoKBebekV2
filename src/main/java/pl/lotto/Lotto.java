@@ -1,6 +1,6 @@
 package pl.lotto;
 
-import pl.lotto.LottoLogic.UiOptionPicker;
+import pl.lotto.lottologic.UiOptionPicker;
 
 public class Lotto implements Playable {
 
@@ -12,6 +12,11 @@ public class Lotto implements Playable {
     @Override
     public void startGame() {
         uiOptionPicker.chooseAnOption();
+    }
+
+    @Override
+    public String displayName() {
+        return "Lotto";
     }
 }
 
