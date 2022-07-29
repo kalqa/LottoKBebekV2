@@ -9,11 +9,11 @@ public class LottoNumberGenerator {
 
     void draw(Random random) {
         while (lottoRandomNumbersSet.size() < 6) {
-            lottoRandomNumbersSet.add(random.nextInt(100));
+            lottoRandomNumbersSet.add(random.nextInt(1, 100));
         }
     }
 
-    static TreeSet<Integer> getLottoRandomNumbersSet() {
+    public TreeSet<Integer> getLottoRandomNumbersSet() {
         return lottoRandomNumbersSet;
     }
 }

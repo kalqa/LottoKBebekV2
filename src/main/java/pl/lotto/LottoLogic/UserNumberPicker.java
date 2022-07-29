@@ -2,28 +2,23 @@ package pl.lotto.LottoLogic;
 
 import pl.lotto.UserAsker;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.TreeSet;
 
 public class UserNumberPicker {
-    private final NumberRangeVerificator numberRangeVerificator = new NumberRangeVerificator();
-    private final ContentVerificator contentVerificator = new ContentVerificator();
-    private static final List<Integer> userNumbers = new ArrayList<>();
+    private final TreeSet<Integer> userNumbers = new TreeSet<>();
 
-    void pickNumbers() {
+    void pickNumbers(UserAsker userAsker, NumberVerificator numberVerificator) {
         MessageDisplayer.displayMessage("Please write six numbers:");
 
         while (userNumbers.size() < 6) {
-            int userNumber = new UserAsker().askUserForNumber();
-            userNumber = numberRangeVerificator.verifyNumberRange(userNumber);
-            userNumber = contentVerificator.verifyContent(userNumber);
+            int userNumber = userAsker.askUserForNumber();
+            userNumber = numberVerificator.verifyNumber(userNumber, userAsker);
             userNumbers.add(userNumber);
-            Collections.sort(userNumbers);
         }
     }
 
-    static List<Integer> getUserNumbers() {
+
+    public TreeSet<Integer> getUserNumbers() {
         return userNumbers;
     }
 }

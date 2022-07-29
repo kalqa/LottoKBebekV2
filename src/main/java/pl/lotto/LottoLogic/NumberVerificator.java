@@ -2,12 +2,11 @@ package pl.lotto.LottoLogic;
 
 import pl.lotto.UserAsker;
 
-public class NumberRangeVerificator {
-
-    int verifyNumberRange(int numberAnswer) {
+public class NumberVerificator {
+    int verifyNumber(int numberAnswer, UserAsker userAsker) {
         while (!isInRange(numberAnswer)) {
-            MessageDisplayer.displayMessage("Your number must be between 1-99 inclusive. Please change this number");
-            numberAnswer = new UserAsker().askUserForNumber();
+            System.out.println("Number must be between 1-99. Please change this number");
+            numberAnswer = userAsker.askUserForNumber();
         }
         return numberAnswer;
     }
@@ -15,4 +14,6 @@ public class NumberRangeVerificator {
     private boolean isInRange(int numberFromUser) {
         return numberFromUser >= 1 && numberFromUser <= 99;
     }
+
 }
+

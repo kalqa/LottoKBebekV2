@@ -10,7 +10,4 @@ public class UserAsker {
         return scanner.nextInt();
     }
 
-    public String askUserForSign() {
-        return scanner.nextLine();
-    }
 }
